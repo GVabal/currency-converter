@@ -26,7 +26,7 @@ class CurrencyConverterServiceTest {
     ExchangeRatesRepository repository;
 
     @Test
-    void returnsNumberWithCorrectNumberOfDigitsAfterDecimalPoint() {
+    void returnsCorrectNumberOfDigitsAfterDecimalPoint() {
         BigDecimal result = service.convert(10, EUR, EUR);
 
         assertThat(result.scale()).isEqualTo(SCALE);
